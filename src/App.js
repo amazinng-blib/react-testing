@@ -3,7 +3,14 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-      <h2>Learn React</h2>
+      <a
+        href="https://ultimateqa.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid="learn-link"
+      >
+        Learn Testing
+      </a>
 
       <h2>Ernest</h2>
     </div>
