@@ -1,6 +1,10 @@
 name: Node.js CI
 
-on: [pull_request]
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   test:
@@ -20,7 +24,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd testing
+        run: npm ci
 
       - name: Build and Test
         run: npm test
