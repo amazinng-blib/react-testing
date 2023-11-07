@@ -27,14 +27,13 @@ on: [pull_request]
 
 jobs:
   test:
-    runs-on: Windows-latest
+    runs-on: Ubuntu-latest
 
     strategy:
       matrix:
         node-version: [16.x]
 
   steps:
-    - name: Checkout
       uses: actions/checkout@v2
     - name: Setup Node
       uses: action/setup-node@v2
